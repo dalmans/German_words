@@ -7,15 +7,11 @@ import 'data.dart';
 
 
 void main() {
- RandomGenderMaker bac = new RandomGenderMaker();
- bac.choseList();
-
+ //RandomGenderMaker bac = new RandomGenderMaker();
+ //bac.choseList();
 
   runApp(MyApp());
 }
-
-
-
 class MyApp extends StatelessWidget{
   Widget build (BuildContext inContext){
     return MaterialApp(
