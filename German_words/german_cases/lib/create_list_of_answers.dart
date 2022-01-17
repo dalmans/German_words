@@ -7,6 +7,7 @@ List<String> answers = [];
 int indexOfTrueAnswer = 0;
 
 class CreateListOfAnswers {
+  int trueAnswers =0;
   createListWithTrueAnswer() {
     if (answers.isEmpty) {
       answers = Data.articles;
@@ -15,18 +16,14 @@ class CreateListOfAnswers {
    // indexOfTrueAnswer = Random().nextInt(5);
     print("index of true answer is:$indexOfTrueAnswer");
     print(answers);
-   // answers.insert(indexOfTrueAnswer, truePreposition);
     return answers;
   }
 
   returnsAListOfArticles() {
     return answers;
   }
-// shakeAListOfArticles() {
-//    }
 
-// getARandomIndexForTrueAnswer() {
-//   return
-// }
+  void calculateTrueAnswers (variantOfArticle) async {
 
+  }
 }

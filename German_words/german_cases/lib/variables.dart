@@ -6,6 +6,8 @@ import 'create_list_of_answers.dart';
 
 String textGender = RandomGenderMaker().choseList();
 String textCase = RandomCaseMaker().choseCaseOfQuestion();
+int counter = CreateListOfAnswers().trueAnswers;
+int numberOfAttempts = CreateListOfAnswers().trueAnswers;
 
 String truePreposition =
     RandomGenderMaker().getListOfGender()[RandomCaseMaker().getIndexOfList()];
