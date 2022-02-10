@@ -12,7 +12,7 @@ class RandomGenderMaker {
       case 0:
         {
           listOfGenders = Data.menGender;
-          gender = "man gender";
+          gender = "Man gender";
           print("man");
           return gender;
         }
@@ -20,7 +20,7 @@ class RandomGenderMaker {
       case 1:
         {
           listOfGenders = Data.womenGender;
-          gender = "woman gender";
+          gender = "Woman gender";
           print("woman");
           return gender;
         }
@@ -28,7 +28,7 @@ class RandomGenderMaker {
       case 2:
         {
           listOfGenders = Data.neuterGender;
-          gender = "neuter gender";
+          gender = "Neuter gender";
           print("neuter gender");
           return gender;
         }
@@ -36,7 +36,7 @@ class RandomGenderMaker {
       case 3:
         {
           listOfGenders = Data.pluralNumber;
-          gender = "plural number";
+          gender = "Plural number";
           print("plural number");
           return gender;
         }
@@ -44,7 +44,7 @@ class RandomGenderMaker {
       default:
         {
           listOfGenders = Data.menGender;
-          gender = "man gender";
+          gender = "Man gender";
           print("man gender");
           return gender;
         }

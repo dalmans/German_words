@@ -15,18 +15,23 @@ void main() {
 class MyApp extends StatelessWidget{
   Widget build (BuildContext inContext){
     return MaterialApp(
+      theme: ThemeData( scaffoldBackgroundColor: Color(0xFFCEF3CA)),
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            bottom: TabBar(
+
+              title: TabBar(
               tabs: [
-                Tab(text: "Theory"),
-                Tab(text: "Tests 1"),
-                Tab(text: "Tests 2",)
+                Tab(child: Text("Theory", style: TextStyle(fontFamily: "BarlowBold", fontSize: 22, color: Color(
+                    0xFF025E0B) ))),
+                Tab(child: Text("Tests 1", style: TextStyle(fontFamily: "BarlowBold", fontSize: 22, color: Color(0xFF025E0B)))),
+                Tab(child: Text("Tests 2", style: TextStyle(fontFamily: "BarlowBold", fontSize: 22, color: Color(0xFF025E0B))))
 
               ],
             ),
+
+              backgroundColor: Colors.green
          ),
           body: TabBarView(
           //  children: [Theory(), Tests()],

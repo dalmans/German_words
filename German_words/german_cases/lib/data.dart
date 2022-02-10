@@ -1,5 +1,6 @@
 class Data {
-  static List<String> menGender = ['der', 'den', 'dem', 'des'];
+ // static List<String> menGender = ['der', 'den', 'dem', 'des'];
+  static List<String> menGender = ['gegenüber', 'gegenüber', 'gegenüber', 'gegenüber'];
   static List<String> womenGender = ['die', 'die', 'der', 'der'];
   static List<String> neuterGender = ['das', 'das', 'dem', 'des'];
   static List<String> pluralNumber = ['die', 'die', 'den', 'der'];
@@ -26,9 +27,9 @@ class Data {
     'Wessen? (Чей?)'
   ];
   static List<String> cases = [
-    'Der Nominativ',
-    'Der Akkusativ',
-    'Der Dativ',
-    'Der Genitiv'
+    'Nominativ',
+    'Akkusativ',
+    'Dativ',
+    'Genitiv'
   ];
 }
