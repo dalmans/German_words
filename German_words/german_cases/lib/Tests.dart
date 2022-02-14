@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:german_cases/variables.dart';
-import 'package:tts/tts.dart';
+
 
 class Tests extends StatefulWidget {
   @override
@@ -42,7 +42,7 @@ class _TestsState extends State<Tests> {
               children: [
                 GestureDetector(
                     onTap: () {
-                      speak(variantOfArticle0);
+                    //  speak(variantOfArticle0);
                       showResult(variantOfArticle0, 0);
                     },
                     child: Container(
@@ -57,7 +57,7 @@ class _TestsState extends State<Tests> {
                             style: TextStyle(fontSize: 25)))),
                 GestureDetector(
                     onTap: () {
-                      speak(variantOfArticle1);
+                     // speak(variantOfArticle1);
                       showResult(variantOfArticle1, 1);
                     },
                     child: Container(
@@ -72,7 +72,7 @@ class _TestsState extends State<Tests> {
                             style: TextStyle(fontSize: 25)))),
                 GestureDetector(
                     onTap: () {
-                      speak(variantOfArticle2);
+                    //  speak(variantOfArticle2);
                       showResult(variantOfArticle2, 2);
                     },
                     child: Container(
@@ -95,7 +95,7 @@ class _TestsState extends State<Tests> {
               children: [
                 GestureDetector(
                     onTap: () {
-                      speak(variantOfArticle3);
+                     // speak(variantOfArticle3);
                       showResult(variantOfArticle3, 3);
                     },
                     child: Container(
@@ -110,7 +110,7 @@ class _TestsState extends State<Tests> {
                             style: TextStyle(fontSize: 25)))),
                 GestureDetector(
                     onTap: () {
-                      speak(variantOfArticle4);
+                     // speak(variantOfArticle4);
                       showResult(variantOfArticle4, 4);
                     },
                     child: Container(
@@ -125,7 +125,7 @@ class _TestsState extends State<Tests> {
                             style: TextStyle(fontSize: 25)))),
                 GestureDetector(
                     onTap: () {
-                      speak(variantOfArticle5);
+                      //speak(variantOfArticle5);
                       showResult(variantOfArticle5, 5);
                     },
                     child: Container(
@@ -153,14 +153,14 @@ class _TestsState extends State<Tests> {
     ]);
   }
 
-  speak(text) async {
-    if (text != null) {
-      Tts.setLanguage("de_Ger");
-      Tts.speak(
-        text,
-      );
-    }
-  }
+  // speak(text) async {
+  //   if (text != null) {
+  //     Tts.setLanguage("de_Ger");
+  //     Tts.speak(
+  //       text,
+  //     );
+  //   }
+  // }
 
   void showResult(variantOfArticle, i) async {
     if (variantOfArticle == truePreposition) {
@@ -168,7 +168,7 @@ class _TestsState extends State<Tests> {
         colors[i] = Colors.green;
       });
 
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 1));
       makeQuestion();
       refreshArticle();
       setState(() {
@@ -182,7 +182,7 @@ class _TestsState extends State<Tests> {
         colors[i] = Colors.red;
       });
 
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 1));
       makeQuestion();
       refreshArticle();
 
@@ -201,7 +201,7 @@ class _TestsState extends State<Tests> {
       });
       makeQuestion();
       refreshArticle();
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 1));
       setState(() {
         counter++;
         numberOfAttempts++;
@@ -214,7 +214,7 @@ class _TestsState extends State<Tests> {
       });
       makeQuestion();
       refreshArticle();
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(microseconds: 30));
       setState(() {
         numberOfAttempts++;
         colors[i] = Colors.lightGreenAccent;
