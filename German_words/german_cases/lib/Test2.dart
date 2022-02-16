@@ -1,23 +1,23 @@
-import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:german_cases/variables.dart';
+import 'dart:async';
 
-class Tests extends StatefulWidget {
+class Test2 extends StatefulWidget {
   @override
-  _TestsState createState() => _TestsState();
+  _Test2State createState() => _Test2State();
 }
 
-class _TestsState extends State<Tests> {
+class _Test2State extends State<Test2> {
   String usersAnswer = "";
 
   @override
   Widget build(BuildContext context) {
     return ListView(children: <Widget>[
-            Center(
+           Center(
           heightFactor: 4,
           child: Text(
-            '$textGender,  $textCase',
+            'Question,  $textCase',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           )),
 
@@ -33,7 +33,7 @@ class _TestsState extends State<Tests> {
                 GestureDetector(
                     onTap: () {
                       //  speak(variantOfArticle0);
-                      showResult(variantOfArticle0, 0);
+                      showResultOfQuestions(variantOfQuestion0, 0);
                     },
                     child: Container(
                         decoration: BoxDecoration(
@@ -43,12 +43,12 @@ class _TestsState extends State<Tests> {
                         margin: const EdgeInsets.all(10.0),
                         alignment: Alignment.center,
                         //   color: colors[0],
-                        child: Text('$variantOfArticle0',
+                        child: Text('$variantOfQuestion0',
                             style: TextStyle(fontSize: 25)))),
                 GestureDetector(
                     onTap: () {
                       // speak(variantOfArticle1);
-                      showResult(variantOfArticle1, 1);
+                      showResultOfQuestions(variantOfQuestion1, 1);
                     },
                     child: Container(
                         decoration: BoxDecoration(
@@ -58,22 +58,7 @@ class _TestsState extends State<Tests> {
                         margin: const EdgeInsets.all(10.0),
                         alignment: Alignment.center,
                         //    color: colors[1],
-                        child: Text('$variantOfArticle1',
-                            style: TextStyle(fontSize: 25)))),
-                GestureDetector(
-                    onTap: () {
-                      //  speak(variantOfArticle2);
-                      showResult(variantOfArticle2, 2);
-                    },
-                    child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: colors[2]),
-                        height: 110,
-                        margin: const EdgeInsets.all(10.0),
-                        alignment: Alignment.center,
-                        // color: colors[2],
-                        child: Text('$variantOfArticle2',
+                        child: Text('$variantOfQuestion1',
                             style: TextStyle(fontSize: 25)))),
               ],
             ),
@@ -86,7 +71,22 @@ class _TestsState extends State<Tests> {
                 GestureDetector(
                     onTap: () {
                       // speak(variantOfArticle3);
-                      showResult(variantOfArticle3, 3);
+                      showResultOfQuestions(variantOfQuestion2, 2);
+                    },
+                    child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                            color: colors[2]),
+                        height: 110,
+                        margin: const EdgeInsets.all(10.0),
+                        alignment: Alignment.center,
+                        //  color: colors[2],
+                        child: Text('$variantOfQuestion2',
+                            style: TextStyle(fontSize: 25)))),
+                GestureDetector(
+                    onTap: () {
+                      // speak(variantOfArticle4);
+                      showResultOfQuestions(variantOfQuestion3, 3);
                     },
                     child: Container(
                         decoration: BoxDecoration(
@@ -95,38 +95,8 @@ class _TestsState extends State<Tests> {
                         height: 110,
                         margin: const EdgeInsets.all(10.0),
                         alignment: Alignment.center,
-                        //  color: colors[3],
-                        child: Text('$variantOfArticle3',
-                            style: TextStyle(fontSize: 25)))),
-                GestureDetector(
-                    onTap: () {
-                      // speak(variantOfArticle4);
-                      showResult(variantOfArticle4, 4);
-                    },
-                    child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: colors[4]),
-                        height: 110,
-                        margin: const EdgeInsets.all(10.0),
-                        alignment: Alignment.center,
                         //  color: colors[4],
-                        child: Text('$variantOfArticle4',
-                            style: TextStyle(fontSize: 25)))),
-                GestureDetector(
-                    onTap: () {
-                      //speak(variantOfArticle5);
-                      showResult(variantOfArticle5, 5);
-                    },
-                    child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: colors[5]),
-                        height: 110,
-                        margin: const EdgeInsets.all(10.0),
-                        alignment: Alignment.center,
-                        // color: colors[5],
-                        child: Text('$variantOfArticle5',
+                        child: Text('$variantOfQuestion3',
                             style: TextStyle(fontSize: 25)))),
               ],
             ),
@@ -137,49 +107,41 @@ class _TestsState extends State<Tests> {
       Center(
           heightFactor: 2,
           child: Text(
-            'Your score is: $counter/$numberOfAttempts',
+            'Your score is: $counterTest2/$numberOfAttemptsTest2',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           )),
     ]);
   }
 
-  // speak(text) async {
-  //   if (text != null) {
-  //     Tts.setLanguage("de_Ger");
-  //     Tts.speak(
-  //       text,
-  //     );
-  //   }
-  // }
-
-  void showResult(variantOfArticle, i) async {
-    if (variantOfArticle == truePreposition) {
+  void showResultOfQuestions( variantOfQuestion,  i) async {
+    if (variantOfQuestion == trueQuestion) {
       setState(() {
         colors[i] = Colors.green;
       });
 
       await Future.delayed(const Duration(seconds: 1));
-      makeQuestionForArticle();
-      refreshArticle();
+      makeQuestionForQuestion();
+      refreshQuestion();
       setState(() {
-        counter++;
-        numberOfAttempts++;
+        counterTest2++;
+        numberOfAttemptsTest2++;
         usersAnswer = "true2";
         colors[i] = Colors.lightGreenAccent;
       });
     } else {
-      setState(() {
-        colors[i] = Colors.red;
-      });
+    setState(() {
+      colors[i] = Colors.red;
+    }
+    );
 
       await Future.delayed(const Duration(seconds: 1));
-      makeQuestionForArticle();
-      refreshArticle();
+      makeQuestionForQuestion();
+      refreshQuestion();
 
       setState(() {
-        numberOfAttempts++;
+        numberOfAttemptsTest2++;
         colors[i] = Colors.lightGreenAccent;
-        usersAnswer = "false2";
+        //usersAnswer = "false2";
       });
     }
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:german_cases/random_gender_maker.dart';
 
+import 'Test2.dart';
 import 'Tests.dart';
 import 'Theory.dart';
 import 'data.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget{
          ),
           body: TabBarView(
           //  children: [Theory(), Tests()],
-            children: [Theory(), Tests(), Tests()],
+            children: [Theory(), Tests(), Test2()],
           ),
         ),
 
@@ -43,5 +44,8 @@ class MyApp extends StatelessWidget{
     );
   }
 }
+
+
+
 
 

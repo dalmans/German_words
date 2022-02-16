@@ -1,29 +1,40 @@
-import 'dart:math';
-
 import 'package:german_cases/data.dart';
-import 'package:german_cases/variables.dart';
 
-List<String> answers = [];
+List<String> answersArticles = [];
+List<String> answersQuestions = [];
+
 int indexOfTrueAnswer = 0;
 
-class CreateListOfAnswers {
-  int trueAnswers =0;
-  createListWithTrueAnswer() {
-    if (answers.isEmpty) {
-      answers = Data.articles;
+class CreateListOfAnswersArticles {
+  int trueAnswers = 0;
+
+  createListWithTrueAnswerArticles() {
+    if (answersArticles.isEmpty) {
+      answersArticles = Data.articles;
     }
-    answers.shuffle();
-   // indexOfTrueAnswer = Random().nextInt(5);
+    answersArticles.shuffle();
     print("index of true answer is:$indexOfTrueAnswer");
-    print(answers);
-    return answers;
+    print(answersArticles);
+    return answersArticles;
+  }
+
+  createListWithTrueAnswerQuestions() {
+    if (answersQuestions.isEmpty) {
+      answersQuestions = Data.question;
+    }
+    answersQuestions.shuffle();
+    print("index of true answer is:$indexOfTrueAnswer");
+    print(answersQuestions);
+    return answersQuestions;
+  }
+
+  returnsAListOfQuestions() {
+    return answersQuestions;
   }
 
   returnsAListOfArticles() {
-    return answers;
+    return answersArticles;
   }
 
-  void calculateTrueAnswers (variantOfArticle) async {
-
-  }
+  void calculateTrueAnswers(variantOfArticle) async {}
 }

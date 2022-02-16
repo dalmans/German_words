@@ -21,6 +21,12 @@ class Data {
     ''
   ];
   static List<String> question = [
+    'Wer? Was?',
+    'Wen? Was?',
+    'Wem? Wo?',
+    'Wessen?'
+  ];
+  static List<String> questionRus = [
     'Wer? (Кто?) Was? (Что?)',
     'Wen? (Кого?) Was? (Что?)',
     'Wem? (Кому?) Wo? (Где?)',

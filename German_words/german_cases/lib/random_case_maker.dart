@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'data.dart';
-int  indexOfList=0;
+
+int indexOfList = 0;
 
 class RandomCaseMaker {
   String caseOfQuestion = "";
@@ -12,7 +13,7 @@ class RandomCaseMaker {
       case 0:
         {
           caseOfQuestion = Data.cases[0];
-        indexOfList = 0;
+          indexOfList = 0;
           return caseOfQuestion;
         }
       case 1:
@@ -35,7 +36,8 @@ class RandomCaseMaker {
         }
     }
   }
-  getIndexOfList(){
+
+  getIndexOfList() {
     print(indexOfList);
     return indexOfList;
   }
