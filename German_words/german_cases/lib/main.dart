@@ -1,6 +1,9 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:german_cases/random_gender_maker.dart';
 
+import 'SizeConfig.dart';
 import 'Test2.dart';
 import 'Tests.dart';
 import 'Theory.dart';
@@ -11,10 +14,13 @@ void main() {
  //RandomGenderMaker bac = new RandomGenderMaker();
  //bac.choseList();
 
-  runApp(MyApp());
+  runApp(
+    MaterialApp(home:  MyApp(),));
 }
 class MyApp extends StatelessWidget{
-  Widget build (BuildContext inContext){
+  Widget build (BuildContext context){
+    SizeConfig().init(context);
+
     return MaterialApp(
       theme: ThemeData( scaffoldBackgroundColor: Color(0xFFCEF3CA)),
       home: DefaultTabController(

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:german_cases/variables.dart';
 import 'dart:async';
 
+import 'SizeConfig.dart';
+
 class Test2 extends StatefulWidget {
   @override
   _Test2State createState() => _Test2State();
@@ -15,10 +17,10 @@ class _Test2State extends State<Test2> {
   Widget build(BuildContext context) {
     return ListView(children: <Widget>[
            Center(
-          heightFactor: 4,
+          heightFactor: 3,
           child: Text(
-            'Question,  $textCase',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            '$textCase',
+            style: TextStyle(fontSize: SizeConfig.testTextSize, fontWeight: FontWeight.bold),
           )),
 
       Row(
@@ -44,7 +46,7 @@ class _Test2State extends State<Test2> {
                         alignment: Alignment.center,
                         //   color: colors[0],
                         child: Text('$variantOfQuestion0',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
                 GestureDetector(
                     onTap: () {
                       // speak(variantOfArticle1);
@@ -59,7 +61,7 @@ class _Test2State extends State<Test2> {
                         alignment: Alignment.center,
                         //    color: colors[1],
                         child: Text('$variantOfQuestion1',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
               ],
             ),
           ),
@@ -82,7 +84,7 @@ class _Test2State extends State<Test2> {
                         alignment: Alignment.center,
                         //  color: colors[2],
                         child: Text('$variantOfQuestion2',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
                 GestureDetector(
                     onTap: () {
                       // speak(variantOfArticle4);
@@ -97,7 +99,7 @@ class _Test2State extends State<Test2> {
                         alignment: Alignment.center,
                         //  color: colors[4],
                         child: Text('$variantOfQuestion3',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
               ],
             ),
           )
@@ -108,7 +110,7 @@ class _Test2State extends State<Test2> {
           heightFactor: 2,
           child: Text(
             'Your score is: $counterTest2/$numberOfAttemptsTest2',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: SizeConfig.testTextSize, fontWeight: FontWeight.bold),
           )),
     ]);
   }
@@ -117,6 +119,7 @@ class _Test2State extends State<Test2> {
     if (variantOfQuestion == trueQuestion) {
       setState(() {
         colors[i] = Colors.green;
+        print("trueQuestion $trueQuestion");
       });
 
       await Future.delayed(const Duration(seconds: 1));
@@ -131,6 +134,7 @@ class _Test2State extends State<Test2> {
     } else {
     setState(() {
       colors[i] = Colors.red;
+      print("trueQuestion $trueQuestion");
     }
     );
 

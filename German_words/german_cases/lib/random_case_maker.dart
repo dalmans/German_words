@@ -38,7 +38,7 @@ class RandomCaseMaker {
   }
 
   getIndexOfList() {
-    print(indexOfList);
+    print("indexOfList $indexOfList");
     return indexOfList;
   }
 }

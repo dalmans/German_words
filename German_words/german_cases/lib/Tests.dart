@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:german_cases/variables.dart';
 
+import 'SizeConfig.dart';
+
 class Tests extends StatefulWidget {
   @override
   _TestsState createState() => _TestsState();
@@ -15,10 +17,10 @@ class _TestsState extends State<Tests> {
   Widget build(BuildContext context) {
     return ListView(children: <Widget>[
             Center(
-          heightFactor: 4,
+          heightFactor: 3,
           child: Text(
             '$textGender,  $textCase',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: SizeConfig.testTextSize, fontWeight: FontWeight.bold),
           )),
 
       Row(
@@ -44,7 +46,7 @@ class _TestsState extends State<Tests> {
                         alignment: Alignment.center,
                         //   color: colors[0],
                         child: Text('$variantOfArticle0',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
                 GestureDetector(
                     onTap: () {
                       // speak(variantOfArticle1);
@@ -59,7 +61,7 @@ class _TestsState extends State<Tests> {
                         alignment: Alignment.center,
                         //    color: colors[1],
                         child: Text('$variantOfArticle1',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
                 GestureDetector(
                     onTap: () {
                       //  speak(variantOfArticle2);
@@ -74,7 +76,7 @@ class _TestsState extends State<Tests> {
                         alignment: Alignment.center,
                         // color: colors[2],
                         child: Text('$variantOfArticle2',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
               ],
             ),
           ),
@@ -97,7 +99,7 @@ class _TestsState extends State<Tests> {
                         alignment: Alignment.center,
                         //  color: colors[3],
                         child: Text('$variantOfArticle3',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
                 GestureDetector(
                     onTap: () {
                       // speak(variantOfArticle4);
@@ -112,7 +114,7 @@ class _TestsState extends State<Tests> {
                         alignment: Alignment.center,
                         //  color: colors[4],
                         child: Text('$variantOfArticle4',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
                 GestureDetector(
                     onTap: () {
                       //speak(variantOfArticle5);
@@ -127,7 +129,7 @@ class _TestsState extends State<Tests> {
                         alignment: Alignment.center,
                         // color: colors[5],
                         child: Text('$variantOfArticle5',
-                            style: TextStyle(fontSize: 25)))),
+                            style: TextStyle(fontSize: SizeConfig.testTextSize)))),
               ],
             ),
           )
